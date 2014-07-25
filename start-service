@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /app
+
+if [ $SERVICE_MODE = "background" ]
+then
+  sidekiq
+else
+  nginx &
+  unicorn -c /etc/unicorn/unicorn.rb
+fi
+
