@@ -1,6 +1,11 @@
 #!/bin/bash
 cd /app
 
+if [ -f config/pre-service.sh ]
+then
+  source config/pre-service.sh
+fi
+
 if [ $SERVICE_MODE = "background" ]
 then
   sidekiq
