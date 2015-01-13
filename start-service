@@ -8,9 +8,9 @@ fi
 
 if [ $SERVICE_MODE = "background" ]
 then
-  sidekiq
+  bundle exec sidekiq
 else
   nginx &
-  unicorn -c /etc/unicorn/unicorn.rb
+  bundle exec unicorn -c /etc/unicorn/unicorn.rb
 fi
 
