@@ -1,4 +1,4 @@
-FROM cxops/ruby:2.0.0-p481
+FROM cxops/ruby:2.1.5
 
 RUN apt-get update -q && \
     apt-get install -qy nginx && \
