@@ -11,6 +11,6 @@ then
   bundle exec sidekiq
 else
   nginx &
-  bundle exec unicorn -c /etc/unicorn/unicorn.rb
+  bundle exec puma -C /etc/puma/puma.rb
 fi
 

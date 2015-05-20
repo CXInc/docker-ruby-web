@@ -5,8 +5,8 @@ RUN apt-get update -q && \
     echo "daemon off;" >> /etc/nginx/nginx.conf
 
 ADD app.conf /etc/nginx/sites-enabled/default
-ADD unicorn.rb /etc/unicorn/unicorn.rb
+ADD puma.rb /etc/puma/puma.rb
 ADD start-service /usr/bin/start-service
 
 RUN chmod a+x /usr/bin/start-service && \
-    gem install unicorn
+    gem install puma
